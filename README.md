@@ -142,8 +142,6 @@ const WEBHOOK_URL = 'https://your-domain.com/webhook/discord';
 ## Dependencies
 
 - `discord.js` ^14.18.0 - Discord API wrapper
-- `dotenv` ^16.5.0 - Environment variable management
-- `node-fetch` ^3.3.2 - HTTP requests
 
 ## Contributing
 

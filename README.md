@@ -153,10 +153,6 @@ const WEBHOOK_URL = 'https://your-domain.com/webhook/discord';
 4. Test thoroughly
 5. Submit a pull request
 
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ## Use Cases
 
 - **AI Chat Integration**: Connect to ChatGPT, Claude, or other AI services

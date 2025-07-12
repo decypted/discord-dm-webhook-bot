@@ -75,8 +75,8 @@ npm start
 
 ## Usage
 
-1. **Start the bot** using the commands above
-2. **DM the bot** from an authorized user account
+1. **Start the bot** using the commands above or ```npm start```
+2. **DM the bot** from an authorized user account. If you don't know how here' a guide from discord: https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID
 3. **Send a message** - the bot will show "Processing your request..."
 4. **Wait for response** - the bot will update the message with the webhook response
 
@@ -99,14 +99,14 @@ The bot sends the following JSON payload to your webhook:
 
 Your webhook should return a text response that will be displayed to the user. If the response is empty, the bot will show "No response received from the webhook."
 
-## File Structure
+## File tree structure
 
 ```
 ├── src/
-│   ├── index.js          # Private version (your personal config)
-│   └── index-public.js   # Public version (for sharing)
+│   ├── index.js          
+│   
 ├── package.json
-├── .env                  # Your bot token (create this)
+├── .env                  # Your bot token (you have create this manually)
 └── README.md
 ```
 
@@ -116,6 +116,7 @@ Your webhook should return a text response that will be displayed to the user. I
 ```javascript
 const AUTHORIZED_USER_IDS = ['USER_ID_1', 'USER_ID_2', 'USER_ID_3'];
 ```
+This is perfect for if you have multiple accounts that you want to use.
 
 ### Different Webhook Endpoints
 ```javascript
@@ -124,19 +125,19 @@ const WEBHOOK_URL = 'https://your-domain.com/webhook/discord';
 
 ## Troubleshooting
 
-### Bot Not Responding to DMs
+### Bot Not Responding to DMs?
 - Ensure the bot has the `DirectMessages` intent enabled
 - Check that your user ID is in the `AUTHORIZED_USER_IDS` array
-- Verify the bot is online and running
+- Verify the bot is online and running. This will display on the console.
 
 ### Webhook Not Receiving Messages
 - Check the `WEBHOOK_URL` is correct and accessible
-- Ensure your webhook endpoint accepts POST requests
-- Check the console for error messages
+- Ensure your webhook endpoint accepts **POST** requests
+- Check the console for error logs.
 
 ### Components v2 Not Working
 - Ensure you're using Discord.js v14.19 or higher
-- The bot automatically uses Components v2 when available
+- The bot uses Components v2 which is a new thing that discord release instead of the old standard embed.
 
 ## Dependencies
 
@@ -156,26 +157,8 @@ const WEBHOOK_URL = 'https://your-domain.com/webhook/discord';
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## Support
-
-If you encounter any issues:
-1. Check the troubleshooting section above
-2. Review the console output for error messages
-3. Ensure all configuration values are correct
-4. Open an issue on GitHub with details about your problem
-
-## Example Use Cases
+## Use Cases
 
 - **AI Chat Integration**: Connect to ChatGPT, Claude, or other AI services
-- **Workflow Automation**: Trigger n8n workflows from Discord
-- **Notification System**: Send alerts and get responses
-- **Custom Bot Logic**: Process messages with your own backend services
-
----
-
-**Happy coding! 🤖** # discord-dm-webhook-bot-
-# discord-dm-webhook-bot
-# discord-dm-webhook-bot
-# discord-dm-webhook-bot
-# -discord-dm-webhook-bot-
-# discord-dm-webhook-bot
+- **Workflow Automation**: Trigger n8n/make workflows from Discord instead of Slack lol
+- **Notification System**: Send alerts and get responses or whatever
